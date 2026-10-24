@@ -1,0 +1,19 @@
+# Preferences: rows are age groups, columns are photographs
+pref <- matrix(c(18,22,20,
+                  2,28,40,
+                 20,10,40),
+               nrow = 3, byrow = TRUE)
+
+colnames(pref) <- c("A", "B", "C")
+
+# (1) Sample covariance between B and C
+cov(pref[, "B"], pref[, "C"])
+
+# (2) Covariance matrix
+cov(pref)
+
+# (3) Sample correlation between B and C
+cor(pref[, "B"], pref[, "C"])
+
+# (4) Correlation matrix
+cor(pref)
