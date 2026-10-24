@@ -1,0 +1,18 @@
+# Normalize 80000 from the range 50000 to 100000
+v <- 80000
+min_value <- 50000
+max_value <- 100000
+
+normalized <- (v - min_value) / (max_value - min_value)
+print(normalized)
+
+# Normalize the given group of values
+x <- c(200,300,400,600,1000)
+
+# Min-max normalization
+min_max <- (x - min(x)) / (max(x) - min(x))
+print(min_max)
+
+# Z-score normalization
+z_score <- (x - mean(x)) / sd(x)
+print(z_score)
