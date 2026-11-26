@@ -1,0 +1,30 @@
+
+# Experiment 2: Data Normalization
+
+# Step 1: Enter the given data
+x <- c(2.5, 3.1, 2.0, 3.6, 2.8)
+
+# Step 2: Min-Max Normalization
+min_max <- (x - min(x)) / (max(x) - min(x))
+
+cat("Min-Max Normalization:\n")
+print(min_max)
+
+# Step 3: Z-Score Normalization
+z_score <- (x - mean(x)) / sd(x)
+
+cat("Z-Score Normalization:\n")
+print(z_score)
+
+# Step 4: Z-Score using Mean Absolute Deviation
+mad_score <- (x - mean(x)) / mean(abs(x - mean(x)))
+
+cat("Z-Score using MAD:\n")
+print(mad_score)
+
+# Step 5: Decimal Scaling Normalization
+j <- ceiling(log10(max(abs(x)) + 1))
+decimal <- x / (10^j)
+
+cat("Decimal Scaling Normalization:\n")
+print(decimal)
